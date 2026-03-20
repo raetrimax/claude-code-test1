@@ -236,21 +236,6 @@
       flex-shrink: 0;
     }
 
-    /* Blinking block cursor */
-    #chat-input-row::after {
-      content: "█";
-      color: var(--amber);
-      opacity: 0;
-      animation: blink 1s step-start infinite;
-      pointer-events: none;
-      font-size: 0.9rem;
-      flex-shrink: 0;
-    }
-
-    #chat-input-row:focus-within::after {
-      opacity: 1;
-    }
-
     #chat-input {
       flex: 1;
       background: transparent;
@@ -259,7 +244,7 @@
       color: var(--amber);
       font-family: var(--font);
       font-size: 0.9rem;
-      caret-color: transparent; /* we use the CSS block cursor above */
+      caret-color: var(--amber);
       text-shadow: 0 0 4px rgba(255,176,0,0.5);
     }
 
